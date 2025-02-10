@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #313338;
+            overflow: hidden;
+        }
 
+        @font-face {
+            font-family: RobloxOpen-Regular;
+            font-weight: 600;
+            src: url("fa.woff2") format("woff2");
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .non-interactive-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            pointer-events: none;
+            user-select: none;
+            display: block;
+        }
+
+        .overlay-text {
+            position: absolute;
+            font-family: RobloxOpen-Regular, "Helvetica Neue", Arial, sans-serif;
+            text-align: center;
+        }
+
+        #username {
+            top: 43%;
+            left: 4%;
+            font-size: 45px;
+            color: var(--username-color, #f8f8f8);
+            border-bottom: 3px solid var(--stripe-color, #f8f8f8);
+            padding-bottom: 3px;
+        }
+
+        #robuxAmount {
+            bottom: 47%;
+            left: 80%;
+            font-size: 40px;
+            color: var(--robux-color, #ffffff);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Over Image</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://i.postimg.cc/7YX5sJcg/temp-Imager-KSe-W1.avif" alt="A description of the image" class="non-interactive-image">
+        <div id="username" class="overlay-text">ROBLOXUSER</div>
+        <div id="robuxAmount" class="overlay-text">ROBUXAMOUNT</div>
+    </div>
+</body>
+</html>
